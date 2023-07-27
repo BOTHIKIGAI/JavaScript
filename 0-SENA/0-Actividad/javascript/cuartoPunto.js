@@ -14,47 +14,49 @@ Adicionalmente, le descuentan aportes, a salud y pensión, Calcule:
 
 */
 
-var trabajador = "Juanes";
-var rolTrabajador = "Director de obra";
-var salario = 3500000;
+    // salario
+var salario = prompt("Digite Salario: ");
+var salario = parseInt(salario);
 
-    // calcular el valor de la hora en base a 8 horas de trabajo de trabajo, pensando que trabaja 240 horas por 30 dias
-var valorXhoraDiurna = 14583;
+    // auxilio de transporte
+if (salario <= 2320000) {
+    var auxTransporte = 140606;
+} else {
+    var auxTransporte = 0;
+}
 
-    // La hora nocturna tiene un valor agregado de 8.458
-var valorAgregadoXhoraNocturna = 8458;
+    // valor hora de trabajo
+var valHoraTrabajo = salario / 240;
 
-    // axulio de transporte en colombia
-var auxTransporte = 140606;
+    // valor de una hora extra diurna
+var horExtraDiurna = (valHoraTrabajo * 0.25) + valHoraTrabajo;
 
-    // porcentaje del aporte a pension es del 16%
-var porcentajeAportePensión = 0.16;
+// valor de una hora extra nocturna
+var horExtraNocturna = (valHoraTrabajo * 0.75) + valHoraTrabajo;
 
-    // porcentaje del aporte a slud es del 12,5%
-var porcentajeAporteSalud = 0.12;
+    // valor total horas extras (diurnas y nocturnas)
+var valTotalTrabajo = horExtraDiurna + horExtraNocturna;
 
-    // numero de horas trabajadas
-var numeroHorasDiurnas = 8;
+// valor devengado de un mes de trabajo
+    /* Son 12 horas en todo el mes, tanto nocturnas como diurnas, por lo cual multiplico el valor de la hora extra por 12 */
+var devMesTrabajo = (salario + (horExtraDiurna * 12) + (horExtraNocturna * 12));
 
-    // numero de horas nocturnas trabajadas
-var numeroHorasNocturnas = 3;
+    // EPS y pensión
+var deducciones = (salario * 0.08);
 
-    // numero de horas extras diurnas
-var numeroHorasExtrasDiurnas = 3;
+    // Total neto
+var salarioNeto = (devMesTrabajo - deducciones);
 
-    // valor de un dia de trabajo sin deducciones
-var salarioCalculo = (((valorXhoraDiurna * (numeroHorasDiurnas + numeroHorasExtrasDiurnas)) + (valorAgregadoXhoraNocturna * numeroHorasNocturnas)));
-
-    // valor de un dia de trabajo con deducciones
-var totalDeducciones = (auxTransporte+((salarioCalculo*30) * (porcentajeAportePensión+porcentajeAporteSalud)));
-
-
-document.write("El auxilio de transporte es de: $" + auxTransporte + "<br>");
-document.write("El valor de las horas extras diurnas es: $" + (valorXhoraDiurna * numeroHorasExtrasDiurnas) + "<br>")
-document.write("El valor de las horas extras nocturnas es: $" + (valorAgregadoXhoraNocturna * numeroHorasNocturnas) + "<br>");
-document.write("El valor total de un dia de trabajo es de $" + salarioCalculo + "<br>");
-document.write("El valor del devengado es de $" + (salarioCalculo * 30) + "<br>");
-document.write("El valor total de las deducciones es de $" + totalDeducciones + "<br>");
-document.write("El neto a pagar es de $" + ((salarioCalculo*30) - totalDeducciones) + "<br>");
+document.write("<table>");
+document.write("<tr><th colspan=2>Comprobante de pago</th></tr>");
+document.write("<tr><th>Descripción</th><th>Valor</th></tr>");
+document.write("<tr><td>Auxilio de transporte</td><td>$" + Math.round(auxTransporte) + "</td></tr>");
+document.write("<tr><td>Valor hora extras diurnas</td><td>$" + Math.round(horExtraDiurna) + "</td></tr>");
+document.write("<tr><td>Valor hora extras nocturnas</td><td>$" + Math.round(horExtraNocturna) + "</td></tr>");
+document.write("<tr><td>Valor total horas extras</td><td>$" + Math.round(valTotalTrabajo) + "</td></tr>");
+document.write("<tr><td>Valor devengado</td><td>$" + Math.round(devMesTrabajo) + "</td></tr>");
+document.write("<tr><td>Total deducciones</td><td>$" + Math.round(deducciones) + "</td></tr>");
+document.write("<tr><td>Salario neto</td><td>$" + Math.round(salarioNeto) + "</td></tr>");
+document.write("</table>");
 
 
