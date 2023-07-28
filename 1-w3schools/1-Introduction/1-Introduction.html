@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-Introduction</title>
+</head>
+<body>
+    
+    <h2>What can JavaScript Do?</h2>
+
+    <h4>Cambiar el contenido de una etiqueta</h4>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+        <!-- id="demo": Es el identificador de la etiqueta p -->
+
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript";'>Click Me</button>
+        <!-- 
+
+            <button></button>:  Es una etiqueta HTML que crea un botón en la página web. En este caso, el botón tiene el texto 
+                                "Click Me" que se muestra como el contenido del botón.
+            
+            type="button": Es un atributo del elemento <button> que especifica el tipo de botón. En este caso, se establece como 
+                           "button", lo que indica que es un botón simple y no tiene funcionalidad específica de enviar 
+                           formularios (como sería el caso con type="submit")
+
+            onclick='...': Es un atributo del elemento <button> que especifica el código JavaScript que se ejecutará cuando el 
+                           botón sea clicado. El código se coloca entre comillas simples ('...') para que sea interpretado como 
+                           una cadena de texto.
+
+         -->
+    
+    <h4>Cambiar los atributos de estilo</h4>
+
+    <p id="demo1">JavaScript can change the style of an HTML element.</p>
+        <!-- id="demo1": Es el identificador de la etiqueta p -->
+    
+    <button type="button" onclick='document.getElementById("demo1").style.fontSize = "35px";'>Click Me</button>
+
+         <!--
+
+            style: Es una propiedad de los elementos HTML que representa los estilos en línea aplicados a ese elemento. Los estilos en 
+                   línea son estilos CSS que se aplican directamente al elemento utilizando el atributo style en la etiqueta HTML.
+
+            fontsize:  Es una propiedad del objeto style que especifica el tamaño de fuente (tamaño de letra) aplicado al elemento. 
+                       Permite acceder o modificar el tamaño de la fuente mediante JavaScript.
+
+         -->
+    
+
+    <h4>JavaScript puede mostrar elementos HTML</h4>
+
+    <p>JavaScript can show hidden HTML elements. (JavaScript puede mostrar y ocultar elementos HTML)</p>
+    <p id="demo2" style="display: none;">Hello JavaScript</p>
+            <!-- 
+                
+                id="demo2": Es el identificador de la etiqueta p 
+            
+                none: Es uno de los posibles valores que puede tomar la propiedad display. Cuando se establece display en "none", el elemento 
+                      se oculta y no se mostrará en la página. Es como si el elemento no estuviera presente en el diseño de la página, aunque 
+                      aún existe en el DOM (modelo de objetos del documento) y puede ser manipulado mediante JavaScript.
+
+            
+            -->
+
+    <button type="button" onclick='document.getElementById("demo2").style.display = "block";'>Click Me</button>
+
+         <!--
+
+            display: Es una propiedad del objeto style que controla cómo se muestra el elemento. Esta propiedad puede tomar diferentes 
+                     valores que determinan cómo el elemento se visualiza en la página.
+            
+            "block": Es uno de los posibles valores que puede tomar la propiedad display. Cuando se establece display en "block", el 
+                     elemento se muestra como un bloque y ocupa todo el ancho disponible en su contenedor. Los elementos de bloque siempre 
+                     inician en una nueva línea.
+
+         -->
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+¿Que es JavaScript?
+
+- JavaScript es el lenguaje de programación más popular del mundo.
+- JavaScript es el lenguaje de programación de la web.
+- JavaScript es fácil de aprender.
+
+
+¿Por qué estudiar JavaScript?
+
+JavaScript es uno de los 3 lenguajes que todos los desarrolladores web deben aprender:
+
+1. HTML para definir el contenido de las paginas web 
+2. CSS para especificar el diseño de las paginas web
+3. JavaScript para programar el comportamiento de las paginas web
+
+
+Introducción
+
+    JavaScript puede cambiar el contenido HTML
+        
+        Uno de los muchos métodos HTML de JavaScript es getElementById()
+        El siguiente ejemplo "busca" un elemento HTML (con id="demo") y cambia el contenido del elemento (innerHTML) a "Hello JavaScript:
+
+        Ejemplo
+
+        document.getElementById("demo").innerHTML = "Hello JavaScript";
+
+
+¿Sabías?
+
+- JavaScript y Java son lenguajes completamente diferentes, tanto en concepto como en diseño
+- JavaScript fue inventado por Brendan Eich en 1995 y se convirtió en un estándar ECMA en 1997
+- ECMA - 262 es el nombre oficial del estandar. ECMAScript es el nombre oficial del lenguaje
