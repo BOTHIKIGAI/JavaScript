@@ -13,6 +13,7 @@
     <script src="/0-SENA/1-Actividad-Clase/JavaScript/listadoNumeros.js"> </script>
     <script src="/0-SENA/1-Actividad-Clase/JavaScript/numeroHasta10While.js"></script>
     <script src="/0-SENA/1-Actividad-Clase/JavaScript/arreglos.js"></script>
+    <script src="/0-SENA/1-Actividad-Clase/JavaScript/portalTransaccional.js"></script>
     <link rel="stylesheet" src="/0-SENA/1-Actividad-Clase/CSS/juanesStyle.css">
     
 
@@ -136,9 +137,26 @@
 
     <h1>Portal Transaccional</h1>
     <p>Opciones por medio de switch</p>
-    <button type="button" onclick="portalTransaccional()">Iniciar</button>
+    <p>Digite el numero de las siguientes opciones:</p>
+    <p>1. Consignar cuenta</p>
+    <p>2. Retirar de la cuenta</p>
+    <p>3. Consultar saldo</p>
+    <p>4. Cambiar clave</p>
+    <p>5. Salir</p><br>
 
-    <div id = "resultado_PortalTransaccional"> </div>
+    
+    <label for="opcionBanco">Elige un banco:</label>
+    <select id="opcionBanco">
+      <option value="1">Consignar cuenta</option>
+      <option value="2">Retirar de la cuenta</option>
+      <option value="3">Consultar saldo</option>
+      <option value="4">Cambiar clave</option>
+      <option value="5">Salir</option>
+      <!-- Otras opciones de banco -->
+    </select>
+    <button type="button" onclick="portalTransaccional()">Ingresar</button>
+    
+    <div id="contenido"></div>
 
 </body>
 
