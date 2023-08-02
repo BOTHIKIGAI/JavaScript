@@ -1,14 +1,14 @@
 function generarWhile() {
     
     let numero = 1;
-    var numero1;
+    var resultadoHTML;
 
     while (numero <= 10) {
-    console.log(numero);
-    numero++;
+        resultadoHTML += "<p>" + numero + "</p>";
+        numero++;
     }
 
-    var resultado
+    var resultado = document.getElementById("resultado_While").innerHTML = resultadoHTML;
  
 }
 

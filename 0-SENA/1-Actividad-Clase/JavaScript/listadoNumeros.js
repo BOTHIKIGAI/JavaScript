@@ -15,6 +15,5 @@ function listadoNumeros() {
     tablaHTML += "</table>";
 
     // Mostrar la tabla en el elemento resultado
-    
     document.getElementById("resultado_ListadoNumeros").innerHTML = tablaHTML;
 }
