@@ -27,8 +27,8 @@ function CalcularPromedio() {
         calificacionMenor = calificacion3;
     }
 
-    // Mostrar el resultado en el párrafo con id "resultado"
-    var resultadoElemento = document.getElementById("resultado");
+    // Mostrar el resultado en el párrafo con id "resultado_promedioCalificacionesAlumno"
+    var resultadoElemento = document.getElementById("resultado_promedioCalificacionesAlumno");
 
     if (promedio >= 3.0) {
         resultadoElemento.textContent = "Aprobado. Promedio: " + promedio.toFixed(2) + ". Calificación mayor: " + calificacionMayor + ". Calificación menor: " + calificacionMenor;
@@ -36,3 +36,4 @@ function CalcularPromedio() {
         resultadoElemento.textContent = "Desaprobado. Promedio: " + promedio.toFixed(2) + ". Calificación mayor: " + calificacionMayor + ". Calificación menor: " + calificacionMenor;
     }
 }
+

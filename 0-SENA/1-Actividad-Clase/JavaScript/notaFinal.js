@@ -17,8 +17,8 @@ function calcularCalificacionFinal() {
     // Calcular la calificación final
     var calificacionFinalMateria = porcentajePromedioParciales + porcentajeCalificacionFinal + porcentajeTrabajoFinal;
 
-    // Mostrar el resultado en el párrafo con id "resultado_Calificaciones"
-    var resultadoElemento = document.getElementById("resultado_Calificaciones");
+    // Mostrar el resultado en el párrafo con id "resultado_CalificaciónFinal"
+    var resultadoElemento = document.getElementById("resultado_CalificaciónFinal");
 
     resultadoElemento.textContent = "Calificación parcial 1: " + calificacionParcial1 + "\n" +
                                      "Calificación parcial 2: " + calificacionParcial2 + "\n" +

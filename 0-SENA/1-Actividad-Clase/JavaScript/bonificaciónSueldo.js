@@ -16,8 +16,8 @@ function calcularBonificacion() {
     // Calcular el nuevo sueldo con la bonificación
     var nuevoSueldo = sueldo + bonificacion;
 
-    // Mostrar el resultado en el párrafo con id "resultado_sueldoNumeroAños"
-    var resultadoElemento = document.getElementById("resultado_sueldoNumeroAños");
+    // Mostrar el resultado en el párrafo con id "resultado_bonificaciónSueldo"
+    var resultadoElemento = document.getElementById("resultado_bonificaciónSueldo");
 
     resultadoElemento.textContent = "Sueldo original: $" + sueldo.toFixed(2) + "\n" +
                                      "Años trabajados: " + añosTrabajados + "\n" +

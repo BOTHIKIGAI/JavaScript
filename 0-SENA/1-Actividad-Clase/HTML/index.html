@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Calificaciones del Alumno</title>
-    <script src="/0-SENA/1-Actividad/JavaScript/taller.js"></script>
-    <script src="/0-SENA/1-Actividad/JavaScript/sueldoNumeroAños.js"></script>
-    <script src="/0-SENA/1-Actividad/JavaScript/calificaciones.js"></script>
-    <script src="/0-SENA/1-Actividad/JavaScript/modelaje.js"></script>
-    <script src="/0-SENA/1-Actividad/JavaScript/listadoNumero.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juanes</title>
+    <script src="/0-SENA/1-Actividad-Clase/JavaScript/promedioCalificaciones.js"></script>
+    <script src="/0-SENA/1-Actividad-Clase/JavaScript/notaFinal.js"></script>
+    <script src="/0-SENA/1-Actividad-Clase/JavaScript/agenciaModelaje.js"></script>
+    <script src="/0-SENA/1-Actividad-Clase/JavaScript/bonificaciónSueldo.js"></script>
+    <script src="/0-SENA/1-Actividad-Clase/JavaScript/listadoNumeros.js"> </script>
+    <script src="/0-SENA/1-Actividad-Clase/JavaScript/numeroHasta10While.js"></script>
+    <link rel="stylesheet" src="/0-SENA/1-Actividad-Clase/CSS/juanesStyle.css">
+    
+
+
+
 </head>
+
 <body>
 
     <h1>Calificaciones del Alumno</h1>
@@ -20,9 +31,9 @@
     <label for="calificacion3">Calificación 3:</label>
     <input type="number" id="calificacion3"><br><br>
 
-    <button onclick="CalcularPromedio()">Calcular Promedio</button><br><br>
+    <button onclick="CalcularPromedio()">Calcular Promedio</button><br>
 
-    <p id="resultado"></p>
+    <p id="resultado_promedioCalificacionesAlumno"></p><br>
 
     <hr>
 
@@ -33,14 +44,13 @@
     <label for="años">Años trabajados:</label>
     <input type="number" id="años"><br><br>
 
-    <button onclick="calcularBonificacion()">Calcular Bonificación</button><br><br>
+    <button onclick="calcularBonificacion()">Calcular Bonificación</button><br>
 
-    <p id="resultado_sueldoNumeroAños"></p>
+    <p id="resultado_bonificaciónSueldo"></p><br>
 
     <hr>
 
-    <h1>Nota final</h1>
-
+    <h1>Calificación Final en Física</h1>
     <form>
         <label for="parcial1">Calificación parcial 1:</label>
         <input type="number" id="parcial1"><br>
@@ -57,16 +67,15 @@
         <label for="trabajoFinal">Calificación del trabajo final:</label>
         <input type="number" id="trabajoFinal"><br><br>
 
-        <button type="button" onclick="calcularCalificacionFinal()">Calcular Calificación Final</button><br>
+        <button type="button" onclick="calcularCalificacionFinal()">Calcular Calificación Final</button>
     </form>
 
-    <p id="resultado_Calificaciones"></p>
+    <p id="resultado_CalificaciónFinal"></p>
 
     <hr>
 
-    <h1>Convocatoria de Modelaje</h1>
-
-    <form id="formularioModelaje">
+    <h1>Agencia de modelaje</h1>
+    <form>
         <label for="genero">Género:</label>
         <select id="genero">
             <option value="hombre">Hombre</option>
@@ -86,15 +95,29 @@
         <select id="colorOjos">
             <option value="azul">Azul</option>
             <option value="otro">Otro</option>
-        </select><br><br>
+        </select><br>
 
         <button type="button" onclick="verificarCumplimiento()">Verificar Cumplimiento</button>
     </form>
 
-    <p id="resultado_modelaje"></p>
+    <p id="resultado_AgenciaModelaje"></p>
 
     <hr>
 
-    
+    <h1>Listado de numeros</h1>
+    <p>Generar listado de numeros</p>
+    <button type="button" onclick="listadoNumeros()">Generar</button><br><br>
+
+    <div id="resultado_ListadoNumeros"></div>
+
+    <hr>
+
+    <h1>While hasta 10</h1>
+    <p>Generar listado de numero con el ciclo while hasta 10</p>
+    <button type="button" onclick="generarWhile()">Generar</button><br><br>
+
+    <div id="resultado_While"></div>
+
 </body>
+
 </html>

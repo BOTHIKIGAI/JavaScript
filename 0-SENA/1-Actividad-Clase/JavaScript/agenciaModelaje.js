@@ -9,8 +9,8 @@ function verificarCumplimiento() {
     // Verificar las condiciones para ser contratado
     var cumpleCondiciones = (genero === "hombre" && edad <= 20 && estatura >= 1.75 && peso <= 70 && colorOjos === "azul");
 
-    // Mostrar el resultado en el párrafo con id "resultado_modelaje"
-    var resultadoElemento = document.getElementById("resultado_modelaje");
+    // Mostrar el resultado en el párrafo con id "resultado_AgenciaModelaje"
+    var resultadoElemento = document.getElementById("resultado_AgenciaModelaje");
 
     if (cumpleCondiciones) {
         resultadoElemento.textContent = "¡Felicidades! Cumple con las condiciones para ser contratado como modelo.";
