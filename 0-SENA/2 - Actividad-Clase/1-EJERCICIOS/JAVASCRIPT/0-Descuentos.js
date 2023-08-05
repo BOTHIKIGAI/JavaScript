@@ -26,7 +26,7 @@ Requisitos:
     3. Valor total de compra por articulo (por grupo)
     3. Valor total de compra total (sin descuento ni impuesto)
     3. Impuesto del 19%
-    3. Valor del decuento aplicado
+    3. Valor del descuento aplicado
 4. Valor total de compra aplicado descuento e impuesto
 
 
@@ -55,6 +55,7 @@ function calcular() {
     var ValorJeanNoDesc = NumJean * ValorJean;
     var ValorPijamasNoDesc = NumPijamas * ValorPijamas;
     var ValorCamisetasNoDesc = NumCamisetas * ValorCamisetas;
+    
 
     // Definción Variable valor total compra sin descuento
 
@@ -80,12 +81,12 @@ function calcular() {
     // Jeanes descuentos
 
     if (NumPijamas > 3) {
-        
-        var ValorJeanDesc = ValorPijamasNoDesc - (ValorPijamasNoDesc * 0.20);
+
+        var ValorPijamaDesc = ValorPijamasNoDesc - (ValorPijamasNoDesc * 0.20);
 
     } else  {
 
-        var ValorJeanDesc = ValorPijamasNoDesc;
+        var ValorPijamaDesc = ValorPijamasNoDesc;
 
     }
 
@@ -101,21 +102,56 @@ function calcular() {
 
     } 
 
-    else if (NumJean >= 2) {
+    else if (NumJean == 2) {
 
-        // Si el numeor de jeans es mayor o igual a dos, se realizara un descuento al primer Jean del 50% y al segundo uno de 30%
+            // Si el numero de Jeans es igual a 2, se realizara el descuento al valor total de los jeans sin descuento, dividendolo entre 40% (resultado del 50% + 30% = 80%. El 80% se divide entre 2)
 
-        var ValorJeanDesc = ValorJeanNoDesc - (ValorJean + (ValorJean * 0.50)) - (ValorJean + (ValorJean * 0.30));
-            // ValorJeanDesc = (numero de jeans * su valor) menos (valor de un jean con descuento del 50%) menos (valor de un jean con descuento del 30%)
-
+       var ValorJeanDesc = ValorJeanNoDesc - (ValorJeanNoDesc * 0.40)
+            // Valor del jean con descuento = valor jean sin descuento - (descuento a realizar al jean)
+            // ValorJeanDesc =             
 
     } else {
 
-        var ValorJeanDesc = "error";
-            // por si sucede algo y no se como explicarlo
+            // En el caso que se tenga mas de un jean se realizar el siguiente calculo
+
+            /*
+
+                1. El valor total del descuento del primero y segundo es igual a $108.000
+                2. Se consigue el valor de los otros en base a la siguiente operación 
+
+                    valorJeanNoDescuento = (numero de jeans - 2) * valor del jeans
+                
+                3. Valor total = valorJeanNoDescuento = valorJeanNoDescuento + 108000
+            
+            */ 
+
+        var ValorJeanDesc = (((NumJean-2)*ValorJean) + 108000);
+            
 
     }
 
+    // Camisetas descuentos
+
+    if (NumCamisetas == 3) {
+
+        var ValorCamisetasDesc = ValorCamisetasNoDesc - ValorJean;
+
+    }
+
+    else {
+
+        var ValorCamisetasDesc = ValorCamisetasNoDesc
+
+    }
+
+
+    // Valor total con descuento (sin iva)
+
+    var VTDesceunto = ValorJeanDesc + ValorPijamaDesc + ValorCamisetasDesc;
+
+    // Valor total con descuento con iva
+
+    var VTDIVA = VTDesceunto + (VTDesceunto * 0.19);
 
     // Imprimir Cantidad de elementos
 
@@ -132,4 +168,13 @@ function calcular() {
     // Imprimir valor total compra realizada + IVA (sin descuentos)
 
     document.getElementById("ingresarValorTotalProductoCompraconIva").innerHTML = "<h3>Valor total compra sin descuento pero con IVA</h3>" + "Total: $" + VTCIVANoDescuentoI;
+
+    // Imprimir el valor con el descuento aplicado (sin iva)
+
+    document.getElementById("ingresarValorTotalProductoDescuentoCompra").innerHTML = "<h3>Valor total compra con descuento pero sin IVA</h3>" + "Total: $" + VTDesceunto;
+
+    // Imprimir el valor con el descuento aplicado (con iva)
+
+    document.getElementById("ingresarValorTotalProductoDescuentoCompraYIVA").innerHTML = "<h3>Valor total compra con IVA y descuento</h3>" + "Total: $" + VTDIVA;
+
 }
