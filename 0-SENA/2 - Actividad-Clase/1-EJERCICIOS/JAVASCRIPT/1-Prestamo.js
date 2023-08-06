@@ -12,10 +12,26 @@
     Se desea conocer:
 
     ● Valor de la amortización a capital que debe pagar en cada cuota
+
+        El valor de la amortización es el dinero que se da en cada cuota, sin contar los intereses
+
     ● Valor de intereses causados en la cuota
+
+        El valor del interes en cada una de las cuotas
+
     ● Valor total cuota que debe pagar
+
+        El valor de la amortalización mas el interes
+
     ● Valor a cancelar en la cuota numero 9
+
+        El valor de la amortizacion mas el interes de mora mas el 5.3%
+
     ● Valor total del pago del crédito, al final de los tres años
+
+        El valor total del pago del credito es el pago del mes en el cual se demoro en pagar la cuota
+        mas el valor normal de los otros años
+
 
     Requerimientos
 
@@ -29,6 +45,20 @@
 
 function calcularCobro() {
 
+    // Ingresar variables
+
+    var valorCredito = document.getElementById("valor_Creadito").value; // el credito solicitado
+    var plazoTiempo = document.getElementById("plazo_Tiempo").value; // el tiempo en el cual se realizara el pago
+    var tasaInteresMensual = document.getElementById("tasa_Interes").value; // la tasa de interes mensual
+    var tasaInteresMoratorios = document.getElementById("tasa_InteresMoratorios").value; // tasa interes moratorios por paga tarde
+    var cobreCasaCobranza = document.getElementById("cobro_CasaCobranza").value; // el cobro por la admninistración del cobro
+
+    // Amortizacion
+
     
+
+    
+
+
 
 }
