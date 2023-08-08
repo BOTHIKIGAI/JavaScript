@@ -43,22 +43,17 @@
 
 */
 
-function calcularCobro() {
-
-    // Ingresar variables
-
-    var valorCredito = document.getElementById("valor_Creadito").value; // el credito solicitado
-    var plazoTiempo = document.getElementById("plazo_Tiempo").value; // el tiempo en el cual se realizara el pago
-    var tasaInteresMensual = document.getElementById("tasa_Interes").value; // la tasa de interes mensual
-    var tasaInteresMoratorios = document.getElementById("tasa_InteresMoratorios").value; // tasa interes moratorios por paga tarde
-    var cobreCasaCobranza = document.getElementById("cobro_CasaCobranza").value; // el cobro por la admninistración del cobro
-
-    // Amortizacion
-
+function calcularCuotas() {
+    var prestamo = parseFloat(document.getElementById("prestamo").value);
+    var years = parseInt(document.getElementById("years").value);
     
-
+    var tasaInteresMensual = 0.028;
+    var interesesMora = 0.039;
+    var gastoAdministrativos = 0.053;
     
-
-
+    var restulatoAmortizacion = prestamo;
+    var totalCuotas = years * 12;
+    
 
 }
+  

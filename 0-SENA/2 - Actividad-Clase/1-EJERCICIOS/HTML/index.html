@@ -24,25 +24,31 @@
 
     <form action="">
 
-        <label for="valor_Creadito">Valor del credito</label>
-        <input type="number" id="valor_Creadito">
-        <br><br>
-        <label for="plazo_Tiempo">Plazo de Tiempo (meses)</label>
-        <input type="number" id="plazo_Tiempo">
-        <br><br>
-        <label for="tasa_Interes">Tasa interes mensual</label>
-        <input type="number" id="tasa_Interes">
-        <br><br>
-        <label for="tasa_InteresMoratorios">Tasa interes moratorios</label>
-        <input type="number" id="tasa_InteresMoratorios">
-        <br><br>
-        <label for="cobro_CasaCobranza">Cobro casa de combranza</label>
-        <input type="number" id="cobro_CasaCobranza">
-        <br><br>
-        <button type="button" onclick="calcularCobro()">calcular</button>
-        <br><br>
+        <label for="string">Ingresa la frase o texto</label><br><br>
+        <input type="text">
+
 
     </form>
+
+    <h1>Actividad Funciones</h1>
+    <br>
+    
+    <h2>Segundo - Prestamo</h2>
+    <hr>
+    <br>
+
+    <form>
+        <label for="prestamo">Monto del préstamo ($):</label>
+        <input type="number" id="prestamo"><br><br>
+        
+        <label for="years">Plazo del préstamo (años):</label>
+        <input type="number" id="years"><br><br>
+        
+        <button type="button" onclick="calcularCuotas()">Calcular</button>
+      </form>
+      
+      <div id="resultados">
+      </div>
 
     <p id= ></p>
 
