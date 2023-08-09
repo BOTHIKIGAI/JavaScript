@@ -50,8 +50,43 @@ function calcularCuotas() {
     var tasaInteresMensual = 0.028;
     var interesesMora = 0.039;
     var gastoAdministrativos = 0.053;
-    var totalCuotas = years * 12;
+    var valorCuota = prestamo / (years * 12);
+    var numCuotas = (years * 12);
+    var resultadoHTML = "<h3>Pagos a realizar en cada cuota</h3>"
+
     
+    for (var i = 1; i <= 8; i++) {
+
+        resultadoHTML += "<h4> Cuota numero: " + i + "</h4>";
+        var TotalCuota = valorCuota + (valorCuota * tasaInteresMensual);
+        resultadoHTML += "<p> Dinero a pagar en esta cuota" + TotalCuota.toFixed(2) + "</p>";
+        var prestamo = prestamo - valorCuota;
+        resultadoHTML += "<p> Dinero que falta por pagar: " + prestamo.toFixed(2) + "</p>"
+        resultadoHTML += "<br><br>"
+
+    }
+
+    resultadoHTML += "<h4> Cuota numero: 9 </h4>";
+    var TotalCuota = valorCuota + (valorCuota * tasaInteresMensual);
+    resultadoHTML += "<p> Dinero a pagar en esta cuota" + TotalCuota.toFixed(2) + "</p>";
+    var prestamo = prestamo - valorCuota;
+    resultadoHTML += "<p> Dinero que falta por pagar: " + prestamo.toFixed(2) + "</p>"
+    resultadoHTML += "<br><br>"
+
+    for (var i = 10; i <= numCuotas; i++) {
+
+        resultadoHTML += "<h4> Cuota numero: " + i + "</h4>";
+        var TotalCuota = valorCuota + (valorCuota * tasaInteresMensual);
+        resultadoHTML += "<p> Dinero a pagar en esta cuota" + TotalCuota.toFixed(2) + "</p>";
+        var prestamo = prestamo - valorCuota;
+        resultadoHTML += "<p> Dinero que falta por pagar: " + prestamoto.Fixed(2) + "</p>" // tengo un problema, el valo es negativo
+        resultadoHTML += "<br><br>"
+
+    }
+
+    document.getElementById("resultados").innerHTML = resultadoHTML;
+
+
 
 }
   
