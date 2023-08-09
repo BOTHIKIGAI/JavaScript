@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/0-SENA/2 - Actividad-Clase/1-EJERCICIOS/CSS/stylesheet.css">
     <script src="/0-SENA/2 - Actividad-Clase/1-EJERCICIOS/JAVASCRIPT/0-Descuentos.js"></script>
     <script src="/0-SENA/2 - Actividad-Clase/1-EJERCICIOS/JAVASCRIPT/1-Prestamo.js"></script>
+    <script src="/0-SENA/2 - Actividad-Clase/1-EJERCICIOS/JAVASCRIPT/2-PropiaFuncion.js"> </script>
 
 </head>
 
@@ -24,12 +25,26 @@
 
     <form action="">
 
-        <label for="string">Ingresa la frase o texto</label><br><br>
-        <input type="text">
+        <label for="string">Ingresa la frase o texto</label>
+        <br><br>
+        <textarea name="string" id="string" cols="60" rows="10"></textarea>
+        <br><br>
+        <label for="tipoCambio">Tipo de cambio</label>
+        <select name="tipoCambio" id="tipoCambio">
 
+            <option value="1">Todas a menores</option>
+            <option value="2">Todas a mayusuclas</option>
+            
+        </select>
+        <br><br>
+        <button type="button" onclick="pasameString()">Enviar palabras</button>
+        <br><br>
+        <h3>Resultado</h3>
+        <p id="resultadoPropiaFuncion"></p>
 
     </form>
 
+    <br><br>
     <h1>Actividad Funciones</h1>
     <br>
     

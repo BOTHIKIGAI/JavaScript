@@ -50,8 +50,6 @@ function calcularCuotas() {
     var tasaInteresMensual = 0.028;
     var interesesMora = 0.039;
     var gastoAdministrativos = 0.053;
-    
-    var restulatoAmortizacion = prestamo;
     var totalCuotas = years * 12;
     
 
