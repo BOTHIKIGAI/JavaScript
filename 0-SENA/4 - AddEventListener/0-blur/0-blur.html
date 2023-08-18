@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejemplo de evento blur</title>
+
+    </head>
+
+    <body>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+
+        <!-- Creo el formulario el cual tiene el id="nombre" -->
+
+        <script>
+
+            const inputNombre = document.getElementById("nombre");
+
+                // Creo una variable constante la cual almacena el input de id "nombre"
+
+            inputNombre.addEventListener("blur", function() {
+                    // determino la constante/variable y invoco el metodo "addEventListener"
+                        // dentro del parentesis le determino que busco que es un evento blur el cual se dispara si se deja de interactuar con en el elemnto
+                        // el elemento en ese caso es escribir o mas bien estar en el input de id "nombre"
+
+                alert("Has dejado de escribir en el campo de nombre.");
+                    // en el caso que salga o deje de interactuar con el id "nombre" (el input) saltara una alarma (alert)
+
+            });
+
+        </script>
+
+    </body>
+</html>

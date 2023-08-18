@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejemplo de evento focus</title>
+    </head>
+
+    <body>
+
+        <!-- Una etiqueta de nombre seguida de un campo de texto -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+
+        <script>
+            // Captura el elemento del campo de texto por su id "nombre"
+            const inputNombre = document.getElementById("nombre");
+
+            // Agrega un evento "focus" al campo de texto
+            inputNombre.addEventListener("focus", function() {
+                // Esta función se ejecutará cuando el campo de texto obtenga el foco (sea seleccionado).
+
+                // Imprime en la consola un mensaje indicando que el campo de nombre ha obtenido el foco.
+                console.log("El campo de nombre ha obtenido el foco.");
+            });
+        </script>
+        
+    </body>
+
+</html>

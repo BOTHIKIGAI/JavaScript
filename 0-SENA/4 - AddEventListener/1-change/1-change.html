@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejemplo de evento change</title>
+
+    </head>
+
+    <body>
+
+        <label for="color">Selecciona un color:</label>
+        <select id="color">
+
+            <option value="rojo">Rojo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+
+        </select>
+
+            <!-- tengo un select con el id=color el cual puede tomar tres valores rojo, verde y azul -->
+
+        <script>
+
+            const selectColor = document.getElementById("color");
+
+                // en una constante de nombre selectColor almacenare el valor del id color
+
+            selectColor.addEventListener("change", function() {
+                    // invoco al metodo addEventListener y unido a eso entre el parentesis le indico que deseo realizar un change
+                    // entre los corchetes indico que...
+
+                const colorSeleccionado = selectColor.value;
+                    // creo una variable constante en la cual guardo el valor de select
+
+                alert("Has seleccionado el color: " + colorSeleccionado);
+                    // cuando se seleccione el valor del input se ejecutara un alert (alerta)
+                    // este alert tiene una concatenación relacionada con una variable/constante con la variable colorSeleccionado
+                
+            });
+
+        </script>
+
+    </body>
+
+</html>

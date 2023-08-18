@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejemplo de evento keydown</title>
+
+    </head>
+
+    <body>
+
+        <!-- Un campo de texto donde el evento keydown será observado -->
+        <input type="text" id="campoTexto">
+        
+        <script>
+            // Capturar el elemento del campo de texto por su id "campoTexto"
+            const campoTexto = document.getElementById("campoTexto");
+
+            // Agregar un evento "keydown" al campo de texto
+            campoTexto.addEventListener("keydown", function(event) {
+                // Esta función se ejecutará cada vez que se presione una tecla en el campo de texto.
+                
+                // El objeto "event" contiene información sobre el evento.
+                // La propiedad "key" del objeto "event" contiene la tecla que fue presionada.
+                
+                // Imprimir en la consola la tecla presionada
+                console.log("Tecla presionada:", event.key);
+            });
+        </script>
+        
+    </body>
+
+</html>

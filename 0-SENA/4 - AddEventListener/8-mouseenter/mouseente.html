@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de evento mouseenter</title>
+</head>
+<body>
+    <!-- Un div con un id "area" que cambia cuando el mouse entra y sale -->
+    <div id="area" style="width: 200px; height: 100px; background-color: lightblue;">Pasa el mouse aquí</div>
+
+    <script>
+        // Captura el elemento div por su id "area"
+        const area = document.getElementById("area");
+
+        // Agrega un evento "mouseenter" al elemento div
+        area.addEventListener("mouseenter", function() {
+            // Esta función se ejecutará cuando el mouse entre al área del div.
+
+            // Cambia el texto y el color de fondo del div
+            area.textContent = "¡Mouse entró!";
+            area.style.backgroundColor = "lightgreen";
+        });
+
+        // Agrega un evento "mouseleave" al elemento div
+        area.addEventListener("mouseleave", function() {
+            // Esta función se ejecutará cuando el mouse salga del área del div.
+
+            // Cambia el texto y el color de fondo del div
+            area.textContent = "Pasa el mouse aquí";
+            area.style.backgroundColor = "lightblue";
+        });
+    </script>
+</body>
+</html>

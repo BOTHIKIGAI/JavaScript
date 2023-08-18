@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejemplo de evento mousemove</title>
+    </head>
+
+    <body>
+        <!-- Un elemento div con un id "infoMouse" para mostrar la posición del mouse -->
+        <div id="infoMouse">Posición del mouse: </div>
+
+        <script>
+            
+            // Captura el elemento div por su id "infoMouse"
+            const infoMouse = document.getElementById("infoMouse");
+
+            // Agrega un evento "mousemove" al documento
+            document.addEventListener("mousemove", function(event) {
+                // Esta función se ejecutará cuando el mouse se mueva en la ventana.
+
+                // Captura las coordenadas X e Y del mouse desde el objeto event
+                const x = event.clientX;
+                const y = event.clientY;
+
+                // Actualiza el contenido del elemento div con las coordenadas del mouse
+                infoMouse.textContent = "Posición del mouse: X=" + x + ", Y=" + y;
+            });
+        </script>
+
+    </body>
+
+</html>
