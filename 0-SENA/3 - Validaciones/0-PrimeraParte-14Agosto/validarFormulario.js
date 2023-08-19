@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             document.getElementById('nombre').classList.add('formulario_grupo_incorrecto');
             document.querySelector('.formulario_input-error').classList.add('formulario_input-error-activo');
+            document.getElementById('nombre').classList.remove('formulario_grupo-correcto');
         }
     }
 });
